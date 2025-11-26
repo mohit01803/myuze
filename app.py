@@ -383,7 +383,8 @@ if __name__ == '__main__':
     print("💰 Cost: $0 (Completely FREE!)")
     print()
     
-    # For development
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    # For Hugging Face Spaces
+    port = int(os.getenv('PORT', 7860))
+    app.run(host='0.0.0.0', port=port, debug=False)
     
   
